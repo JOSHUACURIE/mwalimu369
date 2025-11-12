@@ -1,0 +1,78 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.admin-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh; /* Ensure it takes full height */
+}
+
+.admin-content {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  margin: 0;
+  width: 100%;
+}
+
+/* Remove any potential gaps */
+.admin-layout,
+.admin-main,
+.admin-content {
+  gap: 0;
+}
+
+/* Sidebar styles */
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 100vh;
+  background-color: var(--bg-sidebar);
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-open {
+  transform: translateX(0);
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .admin-main {
+    margin-left: 16rem;
+  }
+  
+  .admin-sidebar {
+    transform: translateX(0);
+    position: fixed; /* Keep it fixed */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 1023px) {
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-content {
+    padding: 1rem;
+  }
+}

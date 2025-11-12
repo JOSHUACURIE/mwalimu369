@@ -1,0 +1,152 @@
+.quick-actions {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.actions-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+}
+
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--primary);
+}
+
+.action-primary:hover {
+  border-color: var(--primary);
+  background-color: rgba(37, 99, 235, 0.02);
+}
+
+.action-success:hover {
+  border-color: var(--secondary);
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.action-warning:hover {
+  border-color: var(--accent);
+  background-color: rgba(245, 158, 11, 0.02);
+}
+
+.action-info:hover {
+  border-color: #8B5CF6;
+  background-color: rgba(139, 92, 246, 0.02);
+}
+
+.action-secondary:hover {
+  border-color: var(--text-secondary);
+  background-color: rgba(107, 114, 128, 0.02);
+}
+
+.action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.action-button:hover .action-icon {
+  background-color: var(--primary);
+  color: white;
+}
+
+.action-primary:hover .action-icon {
+  background-color: var(--primary);
+}
+
+.action-success:hover .action-icon {
+  background-color: var(--secondary);
+}
+
+.action-warning:hover .action-icon {
+  background-color: var(--accent);
+}
+
+.action-info:hover .action-icon {
+  background-color: #8B5CF6;
+}
+
+.action-secondary:hover .action-icon {
+  background-color: var(--text-secondary);
+}
+
+.action-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.action-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.action-description {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.action-arrow {
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.action-button:hover .action-arrow {
+  color: var(--text-primary);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .quick-actions {
+    padding: 1.25rem;
+  }
+  
+  .actions-title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-button {
+    padding: 0.875rem;
+  }
+  
+  .action-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
