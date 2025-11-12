@@ -12,9 +12,9 @@ const Analytics: React.FC = () => {
 
   // Calculate statistics
   const totalStudents = mockUsers.filter(user => user.role === 'student').length;
-  const totalTeachers = mockUsers.filter(user => user.role === 'teacher').length;
+
   const totalSubjects = mockCourses.length;
-  const totalLessons = mockCourses.reduce((total, course) => total + course.lessonsCount, 0);
+
   
   // Mock analytics data
   const enrollmentData = {
@@ -57,12 +57,7 @@ const Analytics: React.FC = () => {
     { name: 'Angela Mitchelle', subject: 'Chemistry', grade: 89, improvement: '+11%' }
   ];
 
-  const subjectStats = mockCourses.map(course => ({
-    name: course.title,
-    enrollment: course.students?.length || 0,
-    completion: Math.floor(Math.random() * 30) + 70,
-    satisfaction: Math.floor(Math.random() * 20) + 80
-  }));
+
 
   const teacherPerformance = mockUsers
     .filter(user => user.role === 'teacher')

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Bell, Search, User, LogOut, X } from 'lucide-react';
+import {  Bell, Search, User, LogOut, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { type SafeUser } from '../../data/mockUsers'
 import './AdminNavbar.css';

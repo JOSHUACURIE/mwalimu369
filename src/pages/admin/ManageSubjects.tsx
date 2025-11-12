@@ -46,13 +46,7 @@ const ManageSubjects: React.FC = () => {
     );
   };
 
-  const handleSelectAll = () => {
-    if (selectedSubjects.length === filteredSubjects.length) {
-      setSelectedSubjects([]);
-    } else {
-      setSelectedSubjects(filteredSubjects.map(subject => subject.id));
-    }
-  };
+
 
   const handleDeleteSubject = (subjectId: string) => {
     // In a real app, this would be an API call

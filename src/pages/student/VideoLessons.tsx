@@ -9,8 +9,7 @@ import './VideoLessons.css';
 const VideoPlayerModal: React.FC<{ video: VideoLesson | null; onClose: () => void }> = ({ video, onClose }) => {
   const videoRef = React.useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-
+  
   useEffect(() => {
     if (video && videoRef.current) {
       // Load the video
@@ -18,23 +17,6 @@ const VideoPlayerModal: React.FC<{ video: VideoLesson | null; onClose: () => voi
     }
   }, [video]);
 
-  const handleTimeUpdate = () => {
-    if (videoRef.current && video) {
-      const currentTime = videoRef.current.currentTime;
-      setCurrentTime(currentTime);
-      
-      const duration = videoRef.current.duration;
-      
-      if (duration > 0 && currentTime > 0) {
-        const progress = (currentTime / duration) * 100;
-        
-        // Save progress at intervals
-        if (Math.floor(currentTime) % 10 === 0) {
-          videoService.updateProgress(video.id, Math.round(progress));
-        }
-      }
-    }
-  };
 
   const handlePlay = async () => {
     if (videoRef.current) {
@@ -67,7 +49,7 @@ const VideoPlayerModal: React.FC<{ video: VideoLesson | null; onClose: () => voi
             controls
             onPlay={handlePlay}
             onPause={handlePause}
-            onTimeUpdate={handleTimeUpdate}
+           
             className="video-element"
           >
             <source src={video.videoUrl} type="video/mp4" />

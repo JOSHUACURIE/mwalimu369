@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
   Send, Paperclip, Smile, Search, MoreVertical, ArrowLeft, 
-  Video, Phone, Info, File, Image, X, Download, FileText 
+  Video, Phone, Info, File, Image,  Download, FileText 
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { mockUsers, mockMessages } from '../../data/mockChatData';
-import { type SafeUser } from '../../data/mockUsers';
+
 import StudentLayout from '../../layout/StudentLayout';
 import './Chat.css';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, Bell, Lock, Users, Palette, Database, Shield, Mail, Globe, Download, Upload } from 'lucide-react';
+import { Save, Bell, Palette, Database, Shield, Download, Upload } from 'lucide-react';
 import AdminLayout from '../../layout/AdminLayout';
 import Button from '../../components/ui/Button';
 import { useTheme } from '../../context/ThemeContext';

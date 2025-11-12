@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Bell, Search, User, LogOut, BookOpen, Award, Home, TrendingUp, X } from 'lucide-react';
+import {  Bell, Search, User, LogOut, BookOpen, Award, Home, TrendingUp, X } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { type SafeUser } from '../../data/mockUsers';
 import './StudentNavbar.css';
@@ -9,7 +9,7 @@ interface StudentNavbarProps {
   user: SafeUser | null;
 }
 
-const StudentNavbar: React.FC<StudentNavbarProps> = ({ onMenuClick, user }) => {
+const StudentNavbar: React.FC<StudentNavbarProps> = ({ user }) => {
   const { logout } = useAuth();
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const [showStats, setShowStats] = useState(false);

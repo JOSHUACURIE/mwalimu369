@@ -25,14 +25,7 @@ const ManageAssignments: React.FC = () => {
     return matchesSearch && matchesStatus && matchesSubject;
   });
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'success';
-      case 'completed': return 'primary';
-      case 'draft': return 'warning';
-      default: return 'secondary';
-    }
-  };
+
 
   const getStatusText = (status: string) => {
     switch (status) {
